@@ -60,6 +60,7 @@ async def start_command(client: Client, message: Message):
 
             if bool(CUSTOM_CAPTION) & (bool(msg.document) or bool(msg.video)):
                 media = msg.video or msg.document
+                global mediaa = media.file_name
                 caption = CUSTOM_CAPTION.format(previouscaption = "" if not msg.caption else msg.caption.html, filename = media.file_name)
             else:
                 caption = "" if not msg.caption else msg.caption.html
