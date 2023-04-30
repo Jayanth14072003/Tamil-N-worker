@@ -70,20 +70,19 @@ async def start_command(client: Client, message: Message):
                 reply_markup = None
 
             try:
-                na = await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
+                na = await msg.copy(chat_id=message.from_user.id, caption = caption , parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
                 await asyncio.sleep(0.5)
-                naa = await na.reply_text(f"<b>ಈ ಫೈಲ್ ಒಂದು ಗಂಟೆಯ ನಂತರ ಡಿಲೀಟ್ ಆಗುತ್ತದೆ, ಆದ್ದರಿಂದ ಈ ಫೈಲ್ ಅನ್ನು ಫಾರ್ವರ್ಡ್ ಅಥವಾ ಸೇವ್ ಮಾಡಿಕೊಳ್ಳಿ</b>", quote=True, reply_markup=reply_markup)
+                naa = await na.reply_text(f"<b>இந்தக் கோப்பு/வீடியோ 1 மணிநேரத்தில் நீக்கப்படும் எனவே, தயவுசெய்து சேமிக்கவும் அல்லது அனுப்பவும். \n\nᴛʜɪs ғɪʟᴇ/ᴠɪᴅᴇᴏ ɪs ᴅᴇʟᴇᴛᴇ ɪɴ 𝟷 ʜᴏᴜʀ sᴏ, ᴘʟᴇᴀsᴇ sᴀᴠᴇ ᴏʀ ғᴏʀᴡᴏʀᴅ ɪᴛ.</b>", quote=True, reply_markup=reply_markup)
                 await asyncio.sleep(3600)
                 await naa.delete()
                 await na.delete()
-                
             except FloodWait as e:
                 await asyncio.sleep(e.x)
-                nan = await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
-                naan = await na.reply_text(f"<b>ಈ ಫೈಲ್ ಒಂದು ಗಂಟೆಯ ನಂತರ ಡಿಲೀಟ್ ಆಗುತ್ತದೆ, ಆದ್ದರಿಂದ ಈ ಫೈಲ್ ಅನ್ನು ಫಾರ್ವರ್ಡ್ ಅಥವಾ ಸೇವ್ ಮಾಡಿಕೊಳ್ಳಿ</b>", quote=True, reply_markup=reply_markup)
-                await asyncio.sleep(360)
-                await naan.delete()
-                await nan.delete()
+                na = await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
+                naa = await na.reply_text(f"<b>இந்தக் கோப்பு/வீடியோ 1 மணிநேரத்தில் நீக்கப்படும் எனவே, தயவுசெய்து சேமிக்கவும் அல்லது அனுப்பவும். \n\nᴛʜɪs ғɪʟᴇ/ᴠɪᴅᴇᴏ ɪs ᴅᴇʟᴇᴛᴇ ɪɴ 𝟷 ʜᴏᴜʀ sᴏ, ᴘʟᴇᴀsᴇ sᴀᴠᴇ ᴏʀ ғᴏʀᴡᴏʀᴅ ɪᴛ.</b>", quote=True, reply_markup=reply_markup)
+                await asyncio.sleep(3600)
+                await naa.delete()
+                await na.delete()
             except:
                 pass
         return
