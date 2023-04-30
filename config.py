@@ -26,8 +26,8 @@ API = environ.get('API','eedc409c6457b8c783019e990dde8fd531b58eca')
 PORT = os.environ.get("PORT", "8080")
 
 #Database 
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://Jayanna:Jayanna2023@yash.tm1c2bd.mongodb.net/?retryWrites=true&w=majority")
-DB_NAME = os.environ.get("DATABASE_NAME", "UploadLinkToFileBot")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://FileShreBot:FileShreBot@cluster0.npdxa7j.mongodb.net/?retryWrites=true&w=majority")
+DB_NAME = os.environ.get("DATABASE_NAME", "Tamil_Serials")
 
 #force sub channel id, if you want enable force sub
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
