@@ -1,5 +1,4 @@
 #(©)CodeXBotz
-from os import environ
 import os
 import logging
 from logging.handlers import RotatingFileHandler
@@ -14,20 +13,21 @@ APP_ID = int(os.environ.get("APP_ID", "3393749"))
 API_HASH = os.environ.get("API_HASH", "a15a5954a1db54952eebd08ea6c68b71")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001693231644"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001816983833"))
 
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", "1061576483"))
-
-#shortenr
-API = environ.get('API','eedc409c6457b8c783019e990dde8fd531b58eca')
+OWNER_ID = int(os.environ.get("OWNER_ID", "5963138883"))
 
 #Port
 PORT = os.environ.get("PORT", "8080")
 
+#shortner
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'omegalinks.in')
+SHORTLINK_API = environ.get('SHORTLINK_API', '0af17d003ce7020eb85d2a54fe0f6ef50e770e40')
+
 #Database 
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://Jayanna:Jayanna2023@yash.tm1c2bd.mongodb.net/?retryWrites=true&w=majority")
-DB_NAME = os.environ.get("DATABASE_NAME", "UploadLinkToFileBot")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://FileShreBot:FileShreBot@cluster0.npdxa7j.mongodb.net/?retryWrites=true&w=majority")
+DB_NAME = os.environ.get("DATABASE_NAME", "Tamil_Serials")
 
 #force sub channel id, if you want enable force sub
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
@@ -38,7 +38,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "").split()):
+    for x in (os.environ.get("ADMINS", "1365052525 1061576483").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
@@ -47,11 +47,7 @@ except ValueError:
 FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
-CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b><code>{filename}</code> \n𝐉𝐨𝐢𝐧 -> <a href='https://telegram.dog/link_serials'>𝐂𝐡𝐚𝐧𝐧𝐞𝐥</a></b>")
-
-#shortner
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'omegalinks.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', '0af17d003ce7020eb85d2a54fe0f6ef50e770e40')
+CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b><code>{filename}</code> \n𝐉𝐨𝐢𝐧 -> <a href='https://telegram.dog/drop_serials'>𝐂𝐡𝐚𝐧𝐧𝐞𝐥</a></b>")
 
 #set True if you want to prevent users from forwarding files from bot
 PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" else False
