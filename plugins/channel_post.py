@@ -25,11 +25,11 @@ async def channel_post(client: Client, message: Message):
     converted_id = post_message.id * abs(client.db_channel.id)
     string = f"get-{converted_id}"
     base64_string = await encode(string)
-    link = get_short(f"https://telegram.me/{client.username}?start={base64_string}")
+    tlink = "https://telegram.me/{client.username}?start={base64_string}"
+    link = get_short(tlink)
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url={link}')]])
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=link)]])
-    media = msg.video or msg.document 
-    await reply_text.edit(f"<b>Here is your link \nhttps://telegram.me/{client.username}?start={base64_string}\n\nPri᥎ᥲᴛᥱ ᥣiᥒκ 🔗\n<code>https://telegram.me/{client.username}?start={base64_string}</code> \n\n<b>𐍃ɦ᧐rᴛ ᥣiᥒκ😎</b>\n<code>{link}</code></b>", reply_markup=reply_markup, disable_web_page_preview = True)
+    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=link)]]) 
+    await reply_text.edit(f"<b>Here is your link \n{tlink}\n\nPri᥎ᥲᴛᥱ ᥣiᥒκ 🔗\n<code>{tlink}</code> \n\n<b>𐍃ɦ᧐rᴛ ᥣiᥒκ😎</b>\n<code>{link}</code></b>", reply_markup=reply_markup, disable_web_page_preview = True)
 
     if not DISABLE_CHANNEL_BUTTON:
         await post_message.edit_reply_markup(reply_markup)
