@@ -5,7 +5,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "5303569553:AAGJoVHZO0LEMXs6CVvIsOc7fYrThFBvpp0")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6046278479:AAEU4PZT5pMNiHp71jXs4BjO6z5yBGiT5PE")
 
 #Your API ID from my.telegram.org
 APP_ID = int(os.environ.get("APP_ID", "3393749"))
@@ -17,7 +17,7 @@ API_HASH = os.environ.get("API_HASH", "a15a5954a1db54952eebd08ea6c68b71")
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001693231644"))
 
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", "1061576483"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "5963138883"))
 
 #shortenr
 API = environ.get('API','eedc409c6457b8c783019e990dde8fd531b58eca')
@@ -38,7 +38,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "1365052525 5963138883").split()):
+    for x in (os.environ.get("ADMINS", "1365052525 1061576483").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
