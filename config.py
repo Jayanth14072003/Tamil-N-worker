@@ -50,8 +50,8 @@ FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>You need to
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b><code>{filename}</code> \n\n𝐉𝐨𝐢𝐧 -> <a href='https://telegram.dog/drop_serials'>𝐂𝐡𝐚𝐧𝐧𝐞𝐥</a></b>")
 
 #shortner
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'powerdisk.pro')
-SHORTLINK_API = environ.get('SHORTLINK_API', '2bd1f1748ba8bd2a2f258364da2f6c72be9ebabb')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'omegalinks.in')
+SHORTLINK_API = environ.get('SHORTLINK_API', '0af17d003ce7020eb85d2a54fe0f6ef50e770e40')
 
 #set True if you want to prevent users from forwarding files from bot
 PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" else False
