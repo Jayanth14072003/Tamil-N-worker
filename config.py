@@ -16,6 +16,9 @@ API_HASH = os.environ.get("API_HASH", "a15a5954a1db54952eebd08ea6c68b71")
 #Your db channel Id
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001816983833"))
 
+#Your log channel Id
+LOG_ID = int(os.environ.get("LOG_ID", "-1001881799737"))
+
 #OWNER ID
 OWNER_ID = int(os.environ.get("OWNER_ID", "5963138883"))
 
@@ -84,3 +87,9 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 def LOGGER(name: str) -> logging.Logger:
     return logging.getLogger(name)
+
+LOG_TEXT_P =  """#𝐍𝐞𝐰𝐔𝐬𝐞𝐫𝐓𝐒
+    
+<b>᚛› 𝐈𝐃 - <code>{}</code></b>
+<b>᚛› 𝐍𝐚𝐦𝐞 - {}</b>
+"""
